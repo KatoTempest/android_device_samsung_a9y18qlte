@@ -1,0 +1,7 @@
+on fs
+    export ANDROID_ROOT /system
+
+    wait /dev/block/platform/soc/1da400.ufshc
+    symlink /dev/block/platform/soc/1da400.ufshc /dev/block/bootdevice
+    symlink /dev/block/platform/soc/1da400.ufshc/by-name /dev/block/by-name
+    symlink /dev/block/platform/soc/1da400.ufshc/by-name/param /dev/block/param
